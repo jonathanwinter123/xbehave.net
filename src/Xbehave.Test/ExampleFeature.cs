@@ -278,7 +278,7 @@ an null value for an argument defined using the fifth type parameter"
             public void Dispose() => throw new InvalidOperationException();
         }
 
-        private static class SingleStepAndThreeExamples
+        public static class SingleStepAndThreeExamples
         {
             private static int previousSum;
 
@@ -296,7 +296,7 @@ an null value for an argument defined using the fifth type parameter"
                     });
         }
 
-        private static class TwoExamplesWithAProblematicOneSkipped
+        public static class TwoExamplesWithAProblematicOneSkipped
         {
             [Scenario]
             [Example(1)]
@@ -312,7 +312,7 @@ an null value for an argument defined using the fifth type parameter"
                     });
         }
 
-        private static class ArrayExamples
+        public static class ArrayExamples
         {
             [Scenario]
             [Example(new[] { "one", "two" }, new[] { 1, 2 })]
@@ -323,7 +323,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => { });
         }
 
-        private static class ScenarioWithThreeParametersASingleStepAndThreeExamplesEachWithOneValue
+        public static class ScenarioWithThreeParametersASingleStepAndThreeExamplesEachWithOneValue
         {
             private static int previousExample;
 
@@ -342,7 +342,7 @@ an null value for an argument defined using the fifth type parameter"
                     });
         }
 
-        private static class SingleStepAndThreeExamplesWithMissingResolvableGenericArguments
+        public static class SingleStepAndThreeExamplesWithMissingResolvableGenericArguments
         {
             private static object previousExample1;
             private static object previousExample2;
@@ -364,7 +364,7 @@ an null value for an argument defined using the fifth type parameter"
                     });
         }
 
-        private static class GenericScenarioFeature
+        public static class GenericScenarioFeature
         {
             [Scenario]
             [Example(1, 2L, "a", 7, 7L, null)]
@@ -377,7 +377,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => { });
         }
 
-        private static class FeatureWithAScenarioWithExampleValuesAndAFormattedStep
+        public static class FeatureWithAScenarioWithExampleValuesAndAFormattedStep
         {
             [Scenario]
             [Example(1, 2, 3)]
@@ -386,7 +386,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => { });
         }
 
-        private static class FeatureWithAScenarioWithNullExampleValuesAndAFormattedStep
+        public static class FeatureWithAScenarioWithNullExampleValuesAndAFormattedStep
         {
             [Scenario]
             [Example(null, null, null)]
@@ -395,7 +395,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => { });
         }
 
-        private static class FeatureWithAScenarioWithExampleValuesAndABadlyFormattedStep
+        public static class FeatureWithAScenarioWithExampleValuesAndABadlyFormattedStep
         {
             [Scenario]
             [Example(1, 2, 3)]
@@ -406,7 +406,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => { });
         }
 
-        private static class FeatureWithTwoScenariosWithInvalidExamples
+        public static class FeatureWithTwoScenariosWithInvalidExamples
         {
             [Scenario]
             [Example("a")]
@@ -425,7 +425,7 @@ an null value for an argument defined using the fifth type parameter"
             }
         }
 
-        private static class FeatureWithTwoScenariosWithExamplesWhichThrowErrors
+        public static class FeatureWithTwoScenariosWithExamplesWhichThrowErrors
         {
             [Scenario]
             [BadExample]
@@ -444,7 +444,7 @@ an null value for an argument defined using the fifth type parameter"
             }
         }
 
-        private static class FeatureWithTwoScenariosWithExamplesWithValuesWhichThrowErrorsWhenDisposed
+        public static class FeatureWithTwoScenariosWithExamplesWithValuesWhichThrowErrorsWhenDisposed
         {
             [Scenario]
             [BadValuesExample]
@@ -463,7 +463,7 @@ an null value for an argument defined using the fifth type parameter"
             }
         }
 
-        private static class ScenariosExpectingDateTimeValues
+        public static class ScenariosExpectingDateTimeValues
         {
 #if NET5_0_OR_GREATER
             private static readonly DateTime expected = new(2014, 6, 26, 10, 48, 30);
@@ -485,7 +485,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => Assert.Equal(expected, actual));
         }
 
-        private static class ScenariosExpectingDateTimeOffsetValues
+        public static class ScenariosExpectingDateTimeOffsetValues
         {
 #if NET5_0_OR_GREATER
             private static readonly DateTimeOffset expected = new(new DateTime(2014, 6, 26, 10, 48, 30));
@@ -507,7 +507,7 @@ an null value for an argument defined using the fifth type parameter"
                     .x(() => Assert.Equal(expected, actual));
         }
 
-        private static class ScenariosExpectingGuidValues
+        public static class ScenariosExpectingGuidValues
         {
 #if NET5_0_OR_GREATER
             private static readonly Guid expected = new("0b228327-585d-47f9-a5ee-292f96ca085c");

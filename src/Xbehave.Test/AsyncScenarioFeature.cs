@@ -36,7 +36,7 @@ namespace Xbehave.Test
             "Given a null body"
                 .x((Func<IStepContext, Task>)null);
 
-        private static class AsyncScenarioThatThrowsAfterYielding
+        public static class AsyncScenarioThatThrowsAfterYielding
         {
             [Scenario]
             public static async Task Scenario()

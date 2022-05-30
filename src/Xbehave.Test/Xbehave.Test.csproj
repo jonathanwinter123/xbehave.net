@@ -9,13 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\**\*.cs" />
-    <Compile Remove="..\desktop\**\*.*" />
-    <Compile Remove="..\dotnet\**\*.*" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Xbehave.Execution\dotnet\Xbehave.Execution.dotnet.csproj" />
+    <ProjectReference Include="..\Xbehave.Execution\Xbehave.Execution.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="..\xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
 </Project>

@@ -28,7 +28,7 @@ namespace Xbehave.Test
                     typeof(TestClassFeature).GetTestEvents()));
         }
 
-        private class InstanceScenarioWithThreeStepsInADisposableType : IDisposable
+        public class InstanceScenarioWithThreeStepsInADisposableType : IDisposable
         {
             private static int instanceCount;
             private readonly int instanceNumber;

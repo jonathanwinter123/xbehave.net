@@ -10,18 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\**\*.cs" />
-    <Compile Remove="..\desktop\**\*.*" />
-    <Compile Remove="..\dotnet\**\*.*" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Xbehave.Core\Xbehave.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="xunit.extensibility.execution" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xbehave.Core\Xbehave.Core.csproj" />
   </ItemGroup>
 
 </Project>

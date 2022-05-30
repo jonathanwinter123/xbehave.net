@@ -37,7 +37,7 @@ namespace Xbehave.Test
                     }));
         }
 
-        private static class ScenarioWithFourParametersAndAStepAssertingEachIsADefaultValue
+        public static class ScenarioWithFourParametersAndAStepAssertingEachIsADefaultValue
         {
             [Scenario]
             public static void Scenario(string w, int x, object y, int? z)

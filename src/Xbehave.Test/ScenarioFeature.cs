@@ -247,7 +247,7 @@ namespace Xbehave.Test
                 .x(() => Assert.IsAssignableFrom<ITestFailed>(results.Single()));
         }
 
-        private class FeatureWithAScenarioWithThreeSteps
+        public class FeatureWithAScenarioWithThreeSteps
         {
             [Scenario]
             public void Scenario()
@@ -263,7 +263,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class TenStepsNamedAlphabeticallyBackwardsStartingWithZ
+        public class TenStepsNamedAlphabeticallyBackwardsStartingWithZ
         {
             [Scenario]
             public static void Scenario()
@@ -300,7 +300,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class FeatureWithAScenarioWithTwoPassingStepsAndOneFailingStep
+        public class FeatureWithAScenarioWithTwoPassingStepsAndOneFailingStep
         {
             [Scenario]
             public static void Scenario()
@@ -318,13 +318,13 @@ namespace Xbehave.Test
             }
         }
 
-        private class FeatureWithAScenarioBodyWhichThrowsAnException
+        public class FeatureWithAScenarioBodyWhichThrowsAnException
         {
             [Scenario]
             public static void Scenario() => throw new InvalidOperationException();
         }
 
-        private class AFailingStepAndTwoPassingStepsNamedAlphabeticallyBackwards
+        public class AFailingStepAndTwoPassingStepsNamedAlphabeticallyBackwards
         {
             [Scenario]
             public static void Scenario()
@@ -340,7 +340,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class FeatureWithANonStaticScenarioButNoDefaultConstructor
+        public class FeatureWithANonStaticScenarioButNoDefaultConstructor
         {
 #pragma warning disable IDE0060 // Remove unused parameter
             public FeatureWithANonStaticScenarioButNoDefaultConstructor(int _)
@@ -355,7 +355,7 @@ namespace Xbehave.Test
                     .x(() => { });
         }
 
-        private class FeatureWithAFailingConstructor
+        public class FeatureWithAFailingConstructor
         {
             public FeatureWithAFailingConstructor() => throw new InvalidOperationException();
 
@@ -366,7 +366,7 @@ namespace Xbehave.Test
                     .x(() => { });
         }
 
-        private class FeatureWithAScenarioWithNoSteps
+        public class FeatureWithAScenarioWithNoSteps
         {
             [Scenario]
             public void Scenario()
@@ -374,7 +374,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class ScenarioWithANestedStep
+        public class ScenarioWithANestedStep
         {
             [Scenario]
             public void Scenario() =>

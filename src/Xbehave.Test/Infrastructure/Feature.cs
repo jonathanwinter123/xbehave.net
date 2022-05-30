@@ -9,7 +9,7 @@ namespace Xbehave.Test.Infrastructure
 {
     public abstract class Feature : IDisposable
     {
-        private static readonly TestAssemblyConfiguration config = new TestAssemblyConfiguration { AppDomain = AppDomainSupport.Denied, };
+        private static readonly TestAssemblyConfiguration config = new TestAssemblyConfiguration { AppDomain = AppDomainSupport.IfAvailable, };
 
         private readonly Dictionary<Assembly, Xunit2> runners = new Dictionary<Assembly, Xunit2>();
 

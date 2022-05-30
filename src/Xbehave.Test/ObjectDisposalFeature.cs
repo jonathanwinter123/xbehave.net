@@ -98,7 +98,7 @@ namespace Xbehave.Test
             "Given a null body"
                 .x(c => ((IDisposable)null).Using(c));
 
-        private static class AStepWithThreeDisposables
+        public static class AStepWithThreeDisposables
         {
             [Scenario]
             public static void Scenario(Disposable disposable0, Disposable disposable1, Disposable disposable2)
@@ -121,7 +121,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class StepWithThreeBadDisposables
+        public static class StepWithThreeBadDisposables
         {
             [Scenario]
             public static void Scenario(Disposable disposable0, Disposable disposable1, Disposable disposable2)
@@ -144,7 +144,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class ThreeStepsWithDisposables
+        public static class ThreeStepsWithDisposables
         {
             [Scenario]
             public static void Scenario(Disposable disposable0, Disposable disposable1, Disposable disposable2)
@@ -168,7 +168,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class StepsFollowedByAFailingStep
+        public static class StepsFollowedByAFailingStep
         {
             [Scenario]
             public static void Scenario(Disposable disposable0, Disposable disposable1, Disposable disposable2)
@@ -195,7 +195,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class StepFailsToComplete
+        public static class StepFailsToComplete
         {
             [Scenario]
             public static void Scenario() =>
@@ -209,7 +209,7 @@ namespace Xbehave.Test
                     });
         }
 
-        private static class AnAsyncStepWithThreeDisposables
+        public static class AnAsyncStepWithThreeDisposables
         {
             [Scenario]
             public static void Scenario(Disposable disposable0, Disposable disposable1, Disposable disposable2)
@@ -233,7 +233,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class StepsWithDisposablesAndTeardowns
+        public static class StepsWithDisposablesAndTeardowns
         {
             [Scenario]
             public static void Scenario()
@@ -248,7 +248,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class Disposable : IDisposable
+        public class Disposable : IDisposable
         {
             private readonly int number;
             private bool isDisposed;

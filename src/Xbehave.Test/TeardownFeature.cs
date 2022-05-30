@@ -141,7 +141,7 @@ namespace Xbehave.Test
                 .x(() => Assert.Single(results.OfType<ITestFailed>()));
         }
 
-        private static class StepWithManyTeardowns
+        public static class StepWithManyTeardowns
         {
             [Scenario]
             public static void Scenario() =>
@@ -152,7 +152,7 @@ namespace Xbehave.Test
                     .Teardown(() => typeof(TeardownFeature).SaveTestEvent("teardown3"));
         }
 
-        private static class StepWithThreeBadTeardowns
+        public static class StepWithThreeBadTeardowns
         {
             [Scenario]
             public static void Scenario() =>
@@ -175,7 +175,7 @@ namespace Xbehave.Test
                     });
         }
 
-        private static class TwoStepsWithThreeTeardownsEach
+        public static class TwoStepsWithThreeTeardownsEach
         {
             [Scenario]
             public static void Scenario()
@@ -194,7 +194,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class TwoStepsWithTeardownsAndAFailingStep
+        public static class TwoStepsWithTeardownsAndAFailingStep
         {
             [Scenario]
             public static void Scenario()
@@ -216,7 +216,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class FailingStepWithThreeTeardowns
+        public static class FailingStepWithThreeTeardowns
         {
             [Scenario]
             public static void Scenario() =>
@@ -231,7 +231,7 @@ namespace Xbehave.Test
                     .Teardown(() => typeof(TeardownFeature).SaveTestEvent("teardown3"));
         }
 
-        private static class StepWithAnAsyncTeardownWhichThrows
+        public static class StepWithAnAsyncTeardownWhichThrows
         {
             [Scenario]
             public static void Scenario() =>

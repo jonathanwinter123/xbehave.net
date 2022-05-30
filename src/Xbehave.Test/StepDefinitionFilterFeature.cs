@@ -67,7 +67,7 @@ namespace Xbehave.Test
                 steps.Select(step => step.Skip("test"));
         }
 
-        private class ScenarioWithSkipAll
+        public class ScenarioWithSkipAll
         {
             [Scenario]
             [SkipAll]
@@ -96,7 +96,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class ScenarioWithContinueAfterThen
+        public class ScenarioWithContinueAfterThen
         {
             [Scenario]
             [ContinueAfterThen]
@@ -123,7 +123,7 @@ namespace Xbehave.Test
                     stepText + (isBackgroundStep ? " (Background)" : null)));
         }
 
-        private class ScenarioWithBackgroundSuffixes
+        public class ScenarioWithBackgroundSuffixes
         {
             [Background]
             public void Background() =>

@@ -40,7 +40,7 @@ namespace Xbehave.Test
                 .x(() => Assert.All(results.Skip(6).Take(1), result => Assert.IsAssignableFrom<ITestSkipped>(result)));
         }
 
-        private static class Steps
+        public static class Steps
         {
             [Scenario]
             public static void Scenario()

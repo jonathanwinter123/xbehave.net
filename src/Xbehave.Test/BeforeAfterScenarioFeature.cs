@@ -55,7 +55,7 @@ namespace Xbehave.Test
                 .x(() => Assert.Single(results.OfType<ITestFailed>()));
         }
 
-        private static class ScenarioWithBeforeAfterScenarioAttribute
+        public static class ScenarioWithBeforeAfterScenarioAttribute
         {
             [BeforeAfter]
             [Scenario]
@@ -72,7 +72,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class ScenarioWithThrowBeforeAttribute
+        public static class ScenarioWithThrowBeforeAttribute
         {
             [ThrowBefore]
             [Scenario]
@@ -89,7 +89,7 @@ namespace Xbehave.Test
             }
         }
 
-        private static class ScenarioWithThrowAfterAttribute
+        public static class ScenarioWithThrowAfterAttribute
         {
             [ThrowAfter]
             [Scenario]

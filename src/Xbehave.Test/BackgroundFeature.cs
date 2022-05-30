@@ -34,7 +34,7 @@ namespace Xbehave.Test
                     result => Assert.Contains("Background", result.Test.DisplayName)));
         }
 
-        private static class BackgroundWithTwoStepsAndTwoScenariosEachWithTwoSteps
+        public static class BackgroundWithTwoStepsAndTwoScenariosEachWithTwoSteps
         {
             private static int x;
 
@@ -69,7 +69,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class Base
+        public class Base
         {
             protected int X { get; set; }
 
@@ -84,7 +84,7 @@ namespace Xbehave.Test
             }
         }
 
-        private class BackgroundInBaseTypeWithTwoStepsAndTwoScenariosEachWithTwoSteps : Base
+        public class BackgroundInBaseTypeWithTwoStepsAndTwoScenariosEachWithTwoSteps : Base
         {
             [Scenario]
             public void Scenario1()

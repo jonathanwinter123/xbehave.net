@@ -26,7 +26,7 @@ namespace Xbehave.Test
                 .x(() => Assert.IsAssignableFrom<ITestSkipped>(results[0]));
         }
 
-        private static class FeatureWithASkippedScenario
+        public static class FeatureWithASkippedScenario
         {
 #pragma warning disable xUnit1004 // Test methods should not be skipped
             [Scenario(Skip = "Test")]

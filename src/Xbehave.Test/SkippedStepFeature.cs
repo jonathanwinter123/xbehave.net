@@ -33,7 +33,7 @@ namespace Xbehave.Test
                 .x(() => Assert.All(results.OfType<ITestSkipped>(), result => Assert.Equal("the feature is unfinished", result.Reason)));
         }
 
-        private static class AScenarioWithSkippedStepsBecauseTheFeatureIsUnfinished
+        public static class AScenarioWithSkippedStepsBecauseTheFeatureIsUnfinished
         {
             [Scenario]
             public static void Scenario()

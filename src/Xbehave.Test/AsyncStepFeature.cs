@@ -41,7 +41,7 @@ namespace Xbehave.Test
                 .x(() => Assert.Equal("I yielded before this.", results.Cast<ITestFailed>().Single().Messages.Single()));
         }
 
-        private static class AsyncStepWhichThrowsAfterYielding
+        public static class AsyncStepWhichThrowsAfterYielding
         {
             [Scenario]
             public static void Scenario() =>
@@ -53,7 +53,7 @@ namespace Xbehave.Test
                     });
         }
 
-        private static class AsyncVoidStepWhichThrowsAfterYielding
+        public static class AsyncVoidStepWhichThrowsAfterYielding
         {
             [Scenario]
             public static void Scenario() =>

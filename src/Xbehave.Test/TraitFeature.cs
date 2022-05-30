@@ -23,7 +23,7 @@ namespace Xbehave.Test
                 .x(() => Assert.Equal(expectedResultCount, results.Length));
         }
 
-        private class TwoSingleStepScenariosWithFooTraitsOfBarAndBazRespectively
+        public class TwoSingleStepScenariosWithFooTraitsOfBarAndBazRespectively
         {
             [Scenario]
             [Trait("foo", "bar")]

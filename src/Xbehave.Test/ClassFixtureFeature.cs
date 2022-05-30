@@ -29,7 +29,7 @@ namespace Xbehave.Test
                 });
         }
 
-        private class ScenarioWithAClassFixture : IClassFixture<Fixture>
+        public class ScenarioWithAClassFixture : IClassFixture<Fixture>
         {
             private readonly Fixture fixture;
 
@@ -50,7 +50,7 @@ namespace Xbehave.Test
                     .x(() => this.fixture.Scenario2Executed = true);
         }
 
-        private sealed class Fixture : IDisposable
+        public sealed class Fixture : IDisposable
         {
             public bool Scenario1Executed { private get; set; }
 
