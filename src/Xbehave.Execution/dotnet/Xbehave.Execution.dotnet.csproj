@@ -6,7 +6,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
